@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8a7eb8bb7c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstrap-5.0.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="uni_produit.js" defer></script>
+    <script src="gestion_panier.js" defer></script>
+    <title>Orinoco-Accueil</title>
+    <link rel="icon"  type="image/png" href="./cart_favicon.png" >
+</head>
+<body>
+    <header>
+        <div id="logoContainer">
+            <a id= "baniere" href="test-bootstrap.html"><i class="fas fa-shopping-cart cartLogo"></i>Orinoco</a>
+        </div>
+        <div id="menuContainer">
+            <a id="accueil" href="test-bootstrap.html">Accueil</a>
+            <div id="bagContainer">
+                <span id="nbArticle" ></span>
+                <a href="panier.html"><i class="fas fa-shopping-bag sac"></i></a>
+            </div>
+        </div>
+    </header>
+    <main id="uniProductMain">
+            <section id="uniProductContainer">
+                <article id="uniProduct">
+                    <div id="uniProductImgContainer">
+                        <img src="" id="uniProductImage" />
+                    </div>
+
+                    <div id="uniProductAside">
+                        <div id="uniProductIdentity">
+                            <h2 id="uniProductName"></h2>
+                            <span id="uniProductSubTitle"></span>
+                        </div>
+                        <div class="separateur separateurProduit"></div>
+                        <div id="uniProductDescription">
+
+                        </div>
+                        <div class="separateur separateurProduit"></div>
+                        <form action="">
+                            <label for="">Choisir une couleur : </label>
+                            <select name="productOptions" id="productOption">
+                            </select>
+                        </form>
+                        <form>
+                            <label for="">Quantité : </label>
+                            <select name="productQuantity" id="productQuantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </form>
+                        <div class="separateur separateurProduit"></div>
+                        <div id="infoLivraison">
+                            <h3 id="livraison">Info Livraison !</h3>
+                            <p>En raison des mesures sanitaires prises par La Poste, l'envoi et la distribution des colis s'effectuent désormais du Lundi au Vendredi. Reprise progressive le Samedi.
+                                Pour plus d'informations, consultez nos conditions de livraison.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <aside id="addToCart">
+                    <h2>Commander</h2>
+                    <div class="separateur separateurCommande"></div>
+                    <div id="uniProductPrice"></div>
+                    <div id="stock">
+                        <span>EN STOCK</span>
+                    </div>
+                    <div class="separateur separateurCommande"></div>
+
+                    <div id="infoFdp">
+                        <span><strong>Frais de port à partir de 1,99€ - Offerts à partir de 60€</strong></span>
+                    </div>
+                    <div class="separateur separateurCommande"></div>
+                    
+                    <div id="partager">
+                        <span><strong>Partager cet article :</strong></span>
+                        <button id="shareButton"><i class="fas fa-share-alt"></i><strong> partager</strong></button>
+                    </div>
+                    <div >
+                        <button id="addProduct"><i class="fas fa-shopping-cart cartLogo"></i> AJOUTER AU PANIER</button>
+                    </div>
+                </aside>
+            </section>
+    </main>
+    <footer>
+        <div id="socialMedias">
+            <i class="fab fa-facebook-square socialIcon" ></i>
+            <i class="fab fa-twitter socialIcon"></i>
+            <i class="fab fa-instagram socialIcon"></i>
+            <i class="fab fa-linkedin socialIcon"></i>
+        </div>
+        <div id="footerTab">
+            <div class="footerCol">
+                <h4>Nous rejoindre</h4>
+                <a href="">Vendez sur Orinoco</a>
+                <a href="">La boutique Orinoco</a>
+                <a href="">Postuler chez nous</a>
+                <a href=""></a>
+            </div>
+            <div class="footerCol">
+                <h4>Qui sommes nous ?</h4>
+                <a href="">Notre histoire</a>
+                <a href="">CGV et avis clients</a>
+                <a href="">Mentions légales</a>
+                <a href=""></a>
+            </div>
+            <div class="footerCol">
+                <h4>Besoins d'aide ?</h4>
+                <a href="">Nous contacter</a>
+                <a href="">Questions fréquentes</a>
+                <a href="">Modes de livraison</a>
+                <a href="">Modes de règlement</a>
+            </div>
+        </div>
+    
+    </footer>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>
