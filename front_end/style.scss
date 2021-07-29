@@ -17,10 +17,10 @@ header{
     margin-right: 5px;
 }
 #baniere{
-    width:15%;
+    display:flex;
     font-size:x-large;
     text-decoration: none;
-
+    text-align:center;align-items:center;
 }
 #menuContainer{
     width:80%;
@@ -641,8 +641,11 @@ footer{
     header{
         justify-content:space-between;
     }
-    #accueil{
+    #lienAccueil{
         display:none;
+    }
+    #menuContainer{
+        justify-content:flex-end;
     }
     #socialMedias{
        width:100%;
