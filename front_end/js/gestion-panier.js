@@ -182,9 +182,3 @@ function qtyGesture(){
         }
     }
 }
-
-
-
-
-
-

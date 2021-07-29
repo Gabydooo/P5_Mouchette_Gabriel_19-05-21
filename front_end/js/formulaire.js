@@ -12,21 +12,10 @@ let ville = document.getElementById("ville");
 let adresse = document.getElementById("adresse");
 
 checkForm(prenom,nom,email,cde_post,ville,adresse);
-
+dejaVu();
 let btn_valider = document.getElementById("commandValidator");
-if (!(formInLocalStorage ==0 || formInLocalStorage ==null)){
-    prenom.value = formInLocalStorage.firstName;
-    nom.value = formInLocalStorage.lastName;
-    email.value = formInLocalStorage.email;
-    cde_post.value = formInLocalStorage.cde_post;
-    ville.value = formInLocalStorage.city;
-    adresse.value=formInLocalStorage.address;
+emptyCart();
 
-}
-if(productInlocalStorage == 0 || productInlocalStorage == null){
-    btn_valider.style.backgroundColor = '#d3895b';
-    btn_valider.disabled = true;
-}
 
 
 
@@ -124,7 +113,7 @@ function getOrder(form){
         body: JSON.stringify(data),
         headers: {'Content-Type': 'application/json; charset=utf-8'}
     });
-    return fetch(req)
+     fetch(req)
         .then ((res)=>res.json())
         .then ((json) => {
              document .getElementById("orderId").innerHTML=json.orderId;
@@ -134,9 +123,30 @@ function getOrder(form){
 
         }
         )
+        .catch ((error) =>{
+            alert("Une erreur est survenue")
+        })
     }
 
+function dejaVu(){
+    if (!(formInLocalStorage ==0 || formInLocalStorage ==null)){
+    prenom.value = formInLocalStorage.firstName;
+    nom.value = formInLocalStorage.lastName;
+    email.value = formInLocalStorage.email;
+    cde_post.value = formInLocalStorage.cde_post;
+    ville.value = formInLocalStorage.city;
+    adresse.value=formInLocalStorage.address;
 
+}
+}
+function emptyCart(){
+    if(productInlocalStorage == 0 || productInlocalStorage == null){
+        btn_valider.style.backgroundColor = '#d3895b';
+        btn_valider.disabled = true;
+        alert("Vous n'avez aucun produit dans votre panier ! Nous allons vous rediriger vers notre page d'accueil !")
+        window.location.href ="index.html" 
+    }
+}
 
 function controlePrenom(){
     if(/^([A-Za-zàáâäçèéêëìíîïñòóôöùúûü]+(( |')[a-z]+)*)+([-]([a-z]+(( |')[a-z]+)*)+)*$/ .test(prenom.value)){

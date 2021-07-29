@@ -80,26 +80,14 @@ function displayProduct(product){
             productPrice: product.price/100,
             subTotal: (product.price/100)*qty
         }
-        // const popupValider = () => {
-        //     if(window.confirm(`l'article ${product.name} couleur ${formChoice} a bien été ajouté au panier Consulter le panier avec OK ou continuer vos achat avec ANNULER` )){
-        //         window.location.href = "./panier.html";
-        //     }
-        //     else{
-        //         window.location.href = "./test-bootstrap.html"
-        //     }
-        // }
-
-
         if(productInlocalStorage){
             productInlocalStorage.push(formProduct);
             localStorage.setItem("product", JSON.stringify(productInlocalStorage));
-            // popupValider();
         }
         else{
             productInlocalStorage= [];
             productInlocalStorage.push(formProduct);
             localStorage.setItem("product", JSON.stringify(productInlocalStorage));
-            // popupValider();
         }
         sortLocalStorage()
     })
